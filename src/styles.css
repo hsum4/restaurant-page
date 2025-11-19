@@ -1,45 +1,11 @@
 body {
-    background-color:beige;
+    background-color: beige;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5em;
+    font-family: "Inter", sans-serif;
 }
-
-button {
-  --button_radius: 0.75em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #000000;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
-}
-
-.button_top {
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.75em 1.5em;
-  background: var(--button_color);
-  color: var(--button_outline_color);
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
-}
-
-button:hover .button_top {
-  /* Pull the button upwards when hovered */
-  transform: translateY(-0.33em);
-}
-
-button:active .button_top {
-  /* Push the button downwards when pressed */
-  transform: translateY(0);
-}
-
 
 .junoimg {
     max-width: 50%;
@@ -55,9 +21,6 @@ button:active .button_top {
 }
 
 .section {
-    background-color: #e8e8e8;
-    border: 5px solid;
-    border-radius: 24px;
     padding: 1em;
     max-width: 30vw;    
     display: flex;
@@ -84,4 +47,79 @@ button:active .button_top {
 
 #content .section:nth-of-type(3) > span {
     margin: 4px 0px;
+}
+
+.box {
+  --borderradius: 14px;
+  --bgsize: 0.38rem;
+  border: 1px solid;
+  border-radius: var(--borderradius, 14px);
+  transform: translateY(-2px);
+  z-index: 2;
+  
+  &::before,
+  &::after {
+    border-radius: var(--borderradius, 14px);
+    background-image: linear-gradient(
+      45deg,
+      #fff 33.33%,
+      rgba(0, 0, 0, 0.95) 33.33%,
+      rgba(0, 0, 0, 0.95) 50%,
+      #fff 50%,
+      #fff 83.33%,
+      rgba(0, 0, 0, 0.95) 83.33%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -2;
+    top: .75rem;
+    left: 0.75rem;
+    width: 100%;
+    height: 100%;
+    background-size: var(--bgsize, 0.28rem) var(--bgsize, 0.28rem);
+  }
+  &::before {
+    top: 0rem;
+    left: 0rem;
+    background: white;
+    z-index: -1;
+  }
+}
+
+h2 {
+  margin: 0 0 1rem;
+}
+
+button {
+  --button_radius: 0.75em;
+  --button_color: white;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  transform: translateY(0);
 }
