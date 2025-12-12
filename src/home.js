@@ -9,4 +9,23 @@ export function loadHome() {
 
     header.appendChild(headerTextElement);
     content.appendChild(header);
+    /////////////////////////////////////////////
+    //Section 2 'description'
+
+    const description = document.createElement("div");
+    description.className = "section box";
+
+    const descriptionSpanElement = document.createElement("span");
+    descriptionSpanElement.textContent = `Juno's is the kind of place that makes you feel right at home. 
+                The warm, inviting atmosphere and the friendly service will have you feeling like you're part of the family. 
+                Every bite of their delicious Filipino dishes feels like a comforting hug, 
+                just like the love you get from Juno himself. It's the kind of spot you'll 
+                want to come back to again and again, whether you're craving classic adobo or something new to try. 
+                Juno's Filipino Food is more than just a meal, it's an experience that sticks with you.`;
+
+    // to do const junoImg = 
+
+    description.appendChild(descriptionSpanElement)
+    content.appendChild(description)
+
 }
