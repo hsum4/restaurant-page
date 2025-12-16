@@ -1,6 +1,10 @@
+import junoImage from "./juno.jpg"
+
 export function loadHome() {
     const content = document.getElementById('content');
-    
+
+    //////////////////////////////////////////////
+    //Section 1 'title'
     const header = document.createElement("div");
     header.className = "section box";
 
@@ -23,9 +27,12 @@ export function loadHome() {
                 want to come back to again and again, whether you're craving classic adobo or something new to try. 
                 Juno's Filipino Food is more than just a meal, it's an experience that sticks with you.`;
 
-    // to do const junoImg = 
+    const junoImg = document.createElement("img");
+    junoImg.src = junoImage;
+    junoImg.id = "junoimg";
+    junoImg.alt = "a picture of Junoboy the Shih-Tzu!"
 
-    description.appendChild(descriptionSpanElement)
-    content.appendChild(description)
-
+    description.appendChild(descriptionSpanElement);
+    description.appendChild(junoImg);
+    content.appendChild(description);
 }
