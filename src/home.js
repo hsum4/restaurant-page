@@ -29,7 +29,7 @@ export function loadHome() {
     const junoImg = document.createElement("img");
     junoImg.src = junoImage;
     junoImg.id = "junoimg";
-    junoImg.alt = "a picture of Junoboy the Shih-Tzu!"
+    junoImg.alt = "a picture of Junoboy the Shih-Tzu!";
 
     sectionTwo.appendChild(descriptionSpan);
     sectionTwo.appendChild(junoImg);
@@ -52,7 +52,7 @@ export function loadHome() {
         "Wednesday": "6am - 6pm",
         "Thursday": "6am - 6pm",
         "Friday": "6am - 6pm",
-        "Sunday": "8am - 8pm"
+        "Saturday": "8am - 8pm"
     }
 
     Object.entries(hours).forEach(([key, value]) => {
@@ -62,4 +62,19 @@ export function loadHome() {
     });
     
     content.appendChild(sectionThree);
+
+    //Section 4
+
+    const sectionFour = document.createElement("div");
+    sectionFour.className = "section box";
+
+    const locationHeader = document.createElement("h2");
+    locationHeader.textContent = "Location";
+    sectionFour.appendChild(locationHeader);
+
+    const locationSpan = document.createElement("span");
+    locationSpan.textContent = "Santa Rosa City, Laguna, The Philippines!";
+    sectionFour.appendChild(locationSpan);
+
+    content.appendChild(sectionFour);
 }
