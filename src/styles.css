@@ -46,9 +46,40 @@ header {
     min-width: 20vw;
 }
 
-.section > span {
+.section > span /*p */ {
     font-size: 18px;
+} /* create css for unordered lists */
+
+/*
+ul {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
+
+li {
+  padding-bottom: 5px;
+}
+*/
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+li {
+  padding: 8px 0;
+  line-height: 1.4;
+}
+
+li strong {
+  font-weight: 600;
+}
+
+
 
 #content .section:nth-of-type(3) > span {
     margin: 4px 0px;
