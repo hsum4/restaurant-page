@@ -32,4 +32,33 @@ export function loadMenu() {
     content.appendChild(appetizersSection);
 
     //section two main courses
+    const coursesSection = document.createElement('div');
+    coursesSection.classList = "section box";
+
+    const coursesHeader = document.createElement('h2');
+    coursesHeader.textContent = "Main Courses";
+
+    const coursesList = document.createElement('ul');
+    const courses = [
+        {name: "Chicken Adobo", description: "Chicken simmered in soy sauce and vinegar"},
+        {name: "Sinigang na Baboy", description: "Pork in a sour tamarind broth"},
+        {name: "Lechon Kawali", description: "Crispy deep-fried pork belly"},
+        {name: "Garlic Fried Rice", description: "Grilled marinated rice"}
+    ]
+
+    courses.forEach(item => {
+        const li = document.createElement("li");
+        const strong = document.createElement("strong");
+
+        strong.textContent = `${item.name}`
+        li.appendChild(strong);
+        li.append(` - ${item.description}`);
+
+        coursesList.appendChild(li);
+    });
+
+    coursesSection.appendChild(coursesHeader);
+    coursesSection.appendChild(coursesList);
+
+    content.appendChild(coursesSection);
 }
