@@ -34,34 +34,25 @@ header {
     margin: 0px;
 }
 
-#content .section:nth-of-type(2) {
+#content #description {
     gap: 0.90em;
 }
-#content .section:nth-of-type(2) > span {
+#content #description > span {
     text-align: center;
 }
 
-#content .section:nth-of-type(2),
-#content .section:nth-of-type(3) {
+#content #description,
+#content #hours {
     min-width: 20vw;
+}
+
+#content #hours > span {
+    margin: 4px 0px;
 }
 
 .section > span /*p */ {
     font-size: 18px;
 } /* create css for unordered lists */
-
-/*
-ul {
-  list-style-type: none;
-  font-size: 18px;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding-bottom: 5px;
-}
-*/
 
 ul {
   list-style: none;
@@ -77,12 +68,6 @@ li {
 
 li strong {
   font-weight: 600;
-}
-
-
-
-#content .section:nth-of-type(3) > span {
-    margin: 4px 0px;
 }
 
 .box {

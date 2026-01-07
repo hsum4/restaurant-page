@@ -17,6 +17,7 @@ export function loadHome() {
 
     const sectionTwo = document.createElement("div");
     sectionTwo.className = "section box";
+    sectionTwo.id = "description";
 
     const descriptionSpan = document.createElement("span");
     descriptionSpan.textContent = `Juno's is the kind of place that makes you feel right at home. 
@@ -39,6 +40,7 @@ export function loadHome() {
 
     const sectionThree = document.createElement("div");
     sectionThree.className = "section box";
+    sectionThree.id = "hours"
 
     const hoursHeader = document.createElement("h2");
     hoursHeader.textContent = "Hours";
