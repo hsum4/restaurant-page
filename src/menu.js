@@ -93,4 +93,34 @@ export function loadMenu() {
 
     content.appendChild(riceNoodlesSection);
 
+    //section four Desserts & Drinks
+    const dessertsAndDrinksSection = document.createElement("div");
+    dessertsAndDrinksSection.classList = "section box";
+
+    const dessertsAndDrinksHeader = document.createElement("h2");
+    dessertsAndDrinksHeader.textContent = "Desserts & Drinks";
+
+    const dessertsAndDrinksList = document.createElement("ul");
+    const dessertsAndDrinks = [
+        {name:"Halo-halo", description: "Shaved ice with sweet beans, fruits, and leche flan"},
+        {name: "Leche Flan", description: "Creamy caramel custard"},
+        {name: "Buko Juice", description: "Fresh coconut juice"},
+        {name: "Sago't Gulaman", description: "Sweet Tapioca and jelly drink"}
+    ]
+
+    dessertsAndDrinks.forEach(item => {
+        const li = document.createElement("li");
+        const strong = document.createElement("strong");
+
+        strong.textContent = `${item.name}`;
+        li.appendChild(strong);
+
+        li.append(` - ${item.description}`);
+        dessertsAndDrinksList.appendChild(li);
+    })    
+
+    dessertsAndDrinksSection.appendChild(dessertsAndDrinksHeader);
+    dessertsAndDrinksSection.appendChild(dessertsAndDrinksList);
+
+    content.appendChild(dessertsAndDrinksSection);
 }
