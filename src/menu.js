@@ -1,5 +1,6 @@
 export function loadMenu() {
     const content = document.getElementById("content");
+    content.textContent = "";
 
     //Section one Appetizers
     const appetizersSection = document.createElement('div');

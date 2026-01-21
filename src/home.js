@@ -2,6 +2,7 @@ import junoImage from "./juno.jpg"
 
 export function loadHome() {
     const content = document.getElementById('content');
+    content.textContent = "";
 
     //Section 1 'title'
     const sectionOne = document.createElement("div");
