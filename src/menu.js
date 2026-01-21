@@ -61,4 +61,36 @@ export function loadMenu() {
     coursesSection.appendChild(coursesList);
 
     content.appendChild(coursesSection);
+
+    //section three rice&noodles
+    const riceNoodlesSection = document.createElement('div');
+    riceNoodlesSection.classList = "section box";
+
+    const riceNoodlesHeader = document.createElement("h2")
+    riceNoodlesHeader.textContent = "Rice & Noodles";
+
+    const riceNoodlesList = document.createElement("ul");
+    const riceNoodles = [
+        {name: "Pancit Canton", description: "Stir-fried egg noodles with meat and vegetable"},
+        {name: "Pancit Bihon", description: "Stir-fried rice noodles"},
+        {name: "Arroz Caldo", description: "Chicken rice porridge"},
+        {name: "Garlic Fried Rice", description: "Filipino-style fried rice "}
+    ]
+
+    riceNoodles.forEach(item => {
+        const li = document.createElement("li");
+        const strong = document.createElement("strong");
+
+        strong.textContent = `${item.name}`;
+        li.appendChild(strong);
+        li.append(` - ${item.description}`);
+
+        riceNoodlesList.appendChild(li);
+    })
+
+    riceNoodlesSection.appendChild(riceNoodlesHeader);
+    riceNoodlesSection.appendChild(riceNoodlesList);
+
+    content.appendChild(riceNoodlesSection);
+
 }
