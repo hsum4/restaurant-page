@@ -2,7 +2,7 @@ import "./styles.css";
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
 
-loadHome();
+//loadHome();
 
 const homeBtn = document.getElementById("homeBtn");
 const menuBtn = document.getElementById("menuBtn");

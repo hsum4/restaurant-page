@@ -46,6 +46,11 @@ header {
     min-width: 20vw;
 }
 
+#content #aboutDesc {
+  max-width: 20vw;
+  text-align: justify;
+}
+
 #content #hours > span {
     margin: 4px 0px;
 }
