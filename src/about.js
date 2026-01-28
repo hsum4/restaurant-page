@@ -1,3 +1,5 @@
+import junoImage from "./juno1.jpg"
+
 export function loadAbout() {
     const content = document.getElementById("content");
     content.textContent = "";
@@ -25,6 +27,14 @@ export function loadAbout() {
  
     //
 
+    const pictureSection = document.createElement("div");
+    pictureSection.className = "section box";
 
+    const junoImg = document.createElement("img");
+    junoImg.src = junoImage;
+    junoImg.id = "junoimg"
+    
+    pictureSection.appendChild(junoImg);
+    content.appendChild(pictureSection);
 
 }
