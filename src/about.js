@@ -37,4 +37,30 @@ export function loadAbout() {
     pictureSection.appendChild(junoImg);
     content.appendChild(pictureSection);
 
+    //
+
+    const contactSection = document.createElement("div");
+    contactSection.classList = "section box";
+
+    const contactHeader = document.createElement("h2");
+    contactHeader.textContent = "Contact Us!";
+
+    const emailSpan = document.createElement("span");
+    const emailStrong = document.createElement("strong");
+    emailStrong.textContent = "E-mail:";
+    emailSpan.appendChild(emailStrong);
+    emailSpan.append(" lancelav1@gmail.com");
+
+    const numberSpan = document.createElement("span");
+    const numberStrong = document.createElement("strong");
+    numberStrong.textContent = "Contact No.:";
+    numberSpan.appendChild(numberStrong);
+    numberSpan.append(" +63 919 488 7035");
+
+    contactSection.appendChild(contactHeader);
+    contactSection.appendChild(emailSpan);
+    contactSection.appendChild(numberSpan);
+
+    content.appendChild(contactSection);
+
 }
